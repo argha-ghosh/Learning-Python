@@ -18,3 +18,4 @@ average = total / len(marks)
 
 print(f"\nTotal Marks: {total}")
 print(f"Average Mark: {average:.2f}")
+
