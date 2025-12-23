@@ -1,0 +1,36 @@
+def hill_climbing_discrete(state, neighbors, heuristic):
+    current = state
+
+    while True:
+        next_state = max(neighbors(current), key=heuristic)
+
+        if heuristic(next_state) <= heuristic(current):
+            return current
+
+        current = next_state
+
+
+# Example usage
+neighbors = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['E'],
+    'D': [],
+    'E': []
+}
+
+heuristic = {
+    'A': 1,
+    'B': 3,
+    'C': 2,
+    'D': 5,
+    'E': 4
+}
+
+result = hill_climbing_discrete(
+    'A',
+    lambda s: neighbors[s],
+    lambda s: heuristic[s]
+)
+
+print("Reached state:", result)
