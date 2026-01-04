@@ -6,18 +6,18 @@ def f(x):
 
 
 # Simple Hill Climbing
-def simple_hill(start):
-    x = start
+# def simple_hill(start):
+#     x = start
 
-    while True:
-        if f(x + 1) > f(x):
-            x = x + 1
-        elif f(x - 1) > f(x):
-            x = x - 1
-        else:
-            break
+#     while True:
+#         if f(x + 1) > f(x):
+#             x = x + 1
+#         elif f(x - 1) > f(x):
+#             x = x - 1
+#         else:
+#             break
 
-    return x
+#     return x
 
 
 # Steepest Ascent Hill Climbing
@@ -43,28 +43,28 @@ def steepest_hill(start):
 
 
 # Stochastic Hill Climbing
-def stochastic_hill(start):
-    x = start
+# def stochastic_hill(start):
+#     x = start
 
-    while True:
-        better = []
+#     while True:
+#         better = []
 
-        if f(x + 1) > f(x):
-            better.append(x + 1)
-        if f(x - 1) > f(x):
-            better.append(x - 1)
+#         if f(x + 1) > f(x):
+#             better.append(x + 1)
+#         if f(x - 1) > f(x):
+#             better.append(x - 1)
 
-        if not better:
-            break
+#         if not better:
+#             break
 
-        x = random.choice(better)
+#         x = random.choice(better)
 
-    return x
+#     return x
 
 
 # Run the algorithms
 start = 0
 
 print("Simple Hill Climbing:", simple_hill(start))
-print("Steepest Ascent Hill Climbing:", steepest_hill(start))
-print("Stochastic Hill Climbing:", stochastic_hill(start))
+# print("Steepest Ascent Hill Climbing:", steepest_hill(start))
+# print("Stochastic Hill Climbing:", stochastic_hill(start))
